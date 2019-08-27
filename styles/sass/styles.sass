@@ -1,0 +1,162 @@
+=flexCenter()
+    display: flex 
+    justify-content: center 
+    align-items: center 
+    flex-wrap: wrap 
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box 
+    outline: none
+$dark: #3c3a40
+body 
+    +flexCenter()
+    align-content: center
+    background-color: black
+    min-height: 100vh 
+    font-family: sans-serif
+.btn-container 
+    +flexCenter()
+    width: 21% 
+    height: 200px 
+    margin: 10px
+    .btn 
+        position: relative
+        width: 120px
+        height: 50px
+        text-transform: uppercase
+        cursor: pointer
+        font-size: 16px
+        letter-spacing: 1px
+        font-weight: bold
+        z-index: 1
+        span 
+            position: absolute 
+
+.btn-1 
+    color: #ff8080
+    background-color: transparent
+    overflow: hidden
+    border: 3px solid #66a5ad
+    border-radius: 8px
+    border-top-color: #c1e1dc
+    border-right-color: #ffccac
+    border-bottom-color: #ffeb94
+    border-left-color: #fdd475
+    span 
+        width: 100% 
+        height: 100% 
+        top: 0
+        left: 0
+        transition: .2s linear
+        z-index: -1
+    .span-1
+        background-color: #fdd475
+        transform: translateY(-100%)
+    .span-2
+        background-color: #c1e1dc
+        transform: translateX(100%)
+    .span-3
+        background-color: #ffccac
+        transform: translateY(100%)
+    .span-4
+        background-color: #ffeb94
+        transform: translateX(-100%)
+    &:hover 
+        color: #484c7f
+        .span-1
+            transform: translate(50%,-50%)
+        .span-2
+            transform: translate(50%,50%)
+        .span-3
+            transform: translate(-50%,50%)
+        .span-4
+            transform: translate(-50%,-50%)
+    &:focus 
+        box-shadow: 0 0 5px 2px #ff8080
+
+.btn-2 
+    border: 4px solid #FB8122
+    background-color: #1D2228
+    border-radius: 4px
+    color: #FB8122
+    color: #FB8122
+    overflow: hidden
+    span 
+        width: 20%
+        height: 50px
+        background-color: rgba(251, 129, 34, .3)
+        z-index: -1
+        animation: music .5s infinite
+        @keyframes music 
+            50% 
+                transform: translateY(10px)
+            100% 
+                transform: none
+    .span-1 
+        left: -2%
+        top: 20px
+    .span-2
+        left: 19%
+        animation-delay: .2s
+    .span-3
+        left: 40%
+        top: 20px
+        animation-delay: .1s
+    .span-4
+        left: 61%
+        animation-delay: .4s
+    .span-5
+        left: 82%
+        top: 20px
+        animation-delay: .3s
+
+.btn-3
+    background-color: #74ccf4
+    border: 4px solid #0f5e9c
+    color: #0f5e9c
+    overflow: hidden
+    span 
+        width: 5px 
+        height: 5px 
+        border: 1px solid #fff
+        border-radius: 50%
+        bottom: -10px
+        z-index: -1
+        animation: 2s swimUp infinite 
+        @keyframes swimUp 
+            100% 
+                transform: translateY(-90px)
+    .span-1 
+        left: 10px
+        animation-delay: .3s
+    .span-2
+        left: 20px
+        width: 8px 
+        height: 8px
+    .span-3
+        left: 90px
+        animation-delay: .6s
+    .span-4
+        left: 100px
+        bottom: -15px
+        width: 10px
+        height: 10px
+        animation-delay: .9s
+    .span-5
+        left: 112px
+        bottom: -20px
+        animation-delay: .7s
+    .span-6
+        left: 55px
+        bottom: -20px
+        animation-delay: 1.5s
+    .span-7
+        left: 65px
+        bottom: -15px
+        width: 10px 
+        height: 10px
+        animation-delay: 1.6s
+    
+
+        
