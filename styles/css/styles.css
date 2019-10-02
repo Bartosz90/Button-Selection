@@ -298,3 +298,77 @@ body {
   -webkit-animation-delay: 1.6s;
           animation-delay: 1.6s;
 }
+
+.btn-4 {
+  padding: 4px 6px;
+  border-top: 4px solid #4ab6e0;
+  border-right: 4px solid #3b7cd1;
+  border-bottom: 4px solid #661fc2;
+  border-left: 4px solid #a114c4;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn-4:hover {
+  -webkit-animation: changeBorderColors .8s linear infinite;
+          animation: changeBorderColors .8s linear infinite;
+}
+
+@-webkit-keyframes changeBorderColors {
+  25% {
+    border-top-color: #3b7cd1;
+    border-right-color: #661fc2;
+    border-bottom-color: #a114c4;
+    border-left-color: #4ab6e0;
+  }
+  50% {
+    border-top-color: #661fc2;
+    border-right-color: #a114c4;
+    border-bottom-color: #4ab6e0;
+    border-left-color: #3b7cd1;
+  }
+  75% {
+    border-top-color: #a114c4;
+    border-right-color: #4ab6e0;
+    border-bottom-color: #3b7cd1;
+    border-left-color: #661fc2;
+  }
+  100% {
+    border-top-color: #4ab6e0;
+    border-right-color: #3b7cd1;
+    border-bottom-color: #661fc2;
+    border-left-color: #a114c4;
+  }
+}
+
+@keyframes changeBorderColors {
+  25% {
+    border-top-color: #3b7cd1;
+    border-right-color: #661fc2;
+    border-bottom-color: #a114c4;
+    border-left-color: #4ab6e0;
+  }
+  50% {
+    border-top-color: #661fc2;
+    border-right-color: #a114c4;
+    border-bottom-color: #4ab6e0;
+    border-left-color: #3b7cd1;
+  }
+  75% {
+    border-top-color: #a114c4;
+    border-right-color: #4ab6e0;
+    border-bottom-color: #3b7cd1;
+    border-left-color: #661fc2;
+  }
+  100% {
+    border-top-color: #4ab6e0;
+    border-right-color: #3b7cd1;
+    border-bottom-color: #661fc2;
+    border-left-color: #a114c4;
+  }
+}

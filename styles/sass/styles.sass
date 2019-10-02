@@ -165,6 +165,44 @@ body
         width: 10px 
         height: 10px
         animation-delay: 1.6s
-    
 
+$blue1: #4ab6e0
+$blue2: #3b7cd1
+$blue3: #661fc2
+$blue4: #a114c4
+
+=borders($weight)
+    border-top: $weight solid $blue1
+    border-right: $weight solid $blue2
+    border-bottom: $weight solid $blue3
+    border-left: $weight solid $blue4
+    border-radius: 4px
+=bordersOnHover($col1, $col2, $col3, $col4)
+    border-top-color: $col1
+    border-right-color: $col2
+    border-bottom-color: $col3 
+    border-left-color: $col4 
+=changeBorderColors() 
+    animation: changeBorderColors .8s linear infinite   
+
+.btn-4
+    padding: 4px 6px
+    +borders(4px)
+    background-color: transparent
+    color: #fff
+    text-transform: uppercase
+    letter-spacing: 1.2px
+    cursor: pointer
+    font-size: 20px
+    &:hover 
+        +changeBorderColors()
+        @keyframes changeBorderColors 
+            25% 
+                +bordersOnHover($blue2, $blue3, $blue4, $blue1)
+            50% 
+                +bordersOnHover($blue3, $blue4, $blue1, $blue2)
+            75% 
+                +bordersOnHover($blue4, $blue1, $blue2, $blue3)
+            100% 
+                +bordersOnHover($blue1, $blue2, $blue3, $blue4)
         
